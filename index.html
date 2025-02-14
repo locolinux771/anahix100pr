@@ -1,0 +1,215 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="js/scrollreveal.js"></script>
+    <LINK rel=StyleSheet href="css/main.css" type="text/css" media=screen>
+    <title>For An</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    
+</head>
+
+<body>
+   
+    <style>
+
+        *, *::after,*::before{
+            margin: 0;  
+            padding: 0;
+            -webkit-box-sezing: border-box;
+            -moz-box-sezing: border-box;
+            box-sezing: border-box;
+        }
+        #barracarga{
+            background-color:rgb(255, 255, 255);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            -webkit-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+            z-index:1000;
+        }
+    
+        #cargando{
+            border: 15px solid #ccc;
+            border-top-color: rgb(151, 150, 150);
+            border-radius: 100%;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top:0px;
+            bottom:0px;
+            left:0px;
+            right: 0px;
+            margin:auto;
+            -webkit-animation: rotate  2s linear infinite;
+            animation: rotate  2s linear infinite;
+        }
+        @-webkit-keyframes rotate  {
+            from {-webkit-transform: rotate(0deg);}
+            to {-webkit-transform: rotate(360deg);}
+        }
+    
+    </style>
+    
+    <div id="barracarga"> 
+        
+        <div id="cargando"></div>
+    
+    </div>
+    
+    <script>
+       window.onload = function(){
+          
+            var contenedor = document.getElementById('barracarga');
+            
+            contenedor.style.visibility = 'hidden';
+            
+            contenedor.style.opacity = '0'
+       }
+    </script>
+    
+
+    <div id="container">
+      
+        
+        <div class="saludo">
+            <center>
+                <audio id="demo" src="canon.mp3"></audio>
+                <script>
+                    document.getElementById('demo').play();
+                    document.getElementById('demo').pause()
+                </script>
+                <div>
+                </div>
+                <h1 class="entrada animacion-1"> Hola Anahí... </h1>
+                <h2 class="inicio-h1 animacion-2">Tú conmigo jamás serás espectadora ...</h2>
+                <h2 class="inicio-h1 animacion-3">Quiero dedicarte esto</h2>
+                <h2 class="inicio-h1 animacion-4">Espero te guste :)</h2>     
+                <p>
+                    <span class="animacion-5">3..</span>
+                    <span class="animacion-6">2..</span>
+                    <span class="animacion-7">1..</span>
+                </p>
+                <a onclick="cambiar()" id="play"><img src="img/corazon.png" class="animacion-8 img " ></a> 
+
+                </script>              
+            </center>
+        </div>
+    </div>
+    <div id="container2">
+        <div class="saludo2">
+
+            <center>
+                <h1 class="title"> Mi bella Anahí <br>  <br></h1>
+            </center>
+            <h2  class=""> <span class="typed "></span> </h2>
+        </div>
+       
+    </div>
+    <div id="container3">
+        <div class="saludo2">
+
+            <center>
+                <h1 class="title" style="font-size: 3rem;"> Creditos: <br>  <br></h1>
+            </center>
+            <h2  class="">  
+                Diseño y animacion hecho por Benny Alvaro<br>
+                <a href="https://www.instagram.com/lugically_cosmic" target="_blank"> instagram  </a>
+                <a href="https://www.facebook.com/lu.de.luck" target="_blank"> facebook  </a>
+                <a href="https://www.GitHub.com/LuOfLuck" target="_blank"> GitHub  </a> <br>
+                para mas trabajos no dudes en contactame <br>
+                <a href="https://www.freepik.es/vectores/fondo" target="_blank"> Vector de Fondo creado por Benny - www.freepik.es </a>
+            </h2>
+        </div>
+       
+    </div>
+    
+    <script>
+        cont1= document.getElementById('container');
+        cont2= document.getElementById('container2');
+        cont3= document.getElementById('container3');
+        cont2.style.display= 'none';
+        cont3.style.display= 'none';
+        
+        function cambiar(){
+            document.getElementById('demo').play();
+            cont1.style.display= 'none';
+            cont2.style.display= 'block';
+
+
+        // Definiendo frases correctamente
+        let frase1 = 'Por donde empezar, recuerdo exactamente hace 1 mes, 14 de enero fue el dia en el que te conocí. ';
+        let frase2 = frase1 + 'Quedé fascinado con tu hermosa carita, tu cálida sonrisa, tus ojitos tiernos y tus mejillas rosadas. ';
+        let frase3 = frase2 + 'Sé que el tiempo que llegamos a compartir fue poco, pero para mí fue suficiente para darme cuenta de lo maravillosa que eres. ';
+        let frase4 = frase3 + 'Todas las cosas que pasamos, las cosas que pude compartir contigo, de verdad se sentía tan bien ser parte de tu vida... <br>';
+        let frase5 = frase4 + 'Ver tu carita preciosa llena de emoción cuando te engreía o cuando te hacía sentir que no estabas sola. Te robaste mi corazón y jamás me cansaré de repetírtelo.. ';
+        let frase6 = frase5 + 'Eres muy importante para mí, incluso, me atrevería a decir que eres más que importante...';
+        let frase7 = frase6 + 'Eres mi motivo, la niña que me da paz y que con un simple mensaje puede alegrar mis días, <br> ';
+        let frase8 = frase7 + 'No sé cómo tomes estas palabras, tal vez piensas que voy rápido, no lo sé..';
+        let frase9 = frase8 + 'Pero no me importa hacer lo que sea con tal de demostrarte lo mucho que te quiero.. ';
+
+        // Definiendo frase13 para evitar errores
+        let frase13 = frase9 + 'No sé si el infinito exista, no sé si lo nuestro termine hoy, mañana, o si ya se terminó, ';
+
+        let frase14 = frase13 + 'pero lo que sí sé, es que te quiero en mi vida, yo a tu lado siento que puedo lograrlo todo. ';
+        let frase15 = frase14 + 'Porque tú eres mi fuerza, mi inspiración y prometo que nunca me olvidaré de ti pase lo que pase';
+
+        let frase2_1 = 'Sé que hace poco tuvimos problemas y nos distanciamos por cosas que no sabía de ti. <br>';
+
+        // Definiendo frase2_7 antes de usarla
+        let frase2_7 = frase2_1 + 'Gracias por haberme contado la verdad, lo valoro mucho y te admiro por todo lo que pasas. ';
+        let frase2_8 = frase2_7 + 'Y a pesar de todo me encantas. ';
+        let frase2_9 = frase2_8 + 'Absolutamente todo de ti... ';
+
+        let frase3_1 = frase2_9 + 'No sabes cómo quisiera verte y darte un fuerte abrazo. Decirte que a pesar de que las mentiras fueron parte de nosotros, mi corazón me dice que nos demos otra oportunidad. <br>';
+        let frase3_2 = frase3_1 + 'NO QUIERO DEJARTE IR TAN FÁCIL ANAHÍ PORQUE PARA MÍ ERES MUY VALIOSA Y QUIERO SEGUIR GANÁNDOME TU CORAZÓN. ';
+        let frase3_3 = frase3_2 + 'Ya las palabras quedan cortas cuando se trata de lo que siento por ti. ';
+        let frase3_4 = frase3_3 + 'Feliz San Valentín, princesita. Sigue siendo esa niña valiente y llena de sueños, y cuenta conmigo para lo que sea, que yo estaré muy orgulloso de tus logros .<br>';
+        let frase3_5 = frase3_4 + 'Por siempre y para siempre... <br><br><br><br>';
+        let frase3_6 = frase3_5 + '<a onclick="">Te quiere, Benny.</a>';
+
+    // Iniciando Typed.js correctamente
+        const typed = new Typed('.typed', {
+            strings: [
+                frase1, frase2, frase3, frase4, frase5, frase6, frase7, frase8, frase9,
+                frase14, frase15, frase2_1, frase2_8, frase2_9, frase3_2, frase3_3, frase3_4, frase3_5, frase3_6
+            ],
+            typeSpeed: 60,
+            startDelay: 2000,
+            cursorChar: '<3',
+            });
+        }
+        function creditos(){
+            cont2.style.display= 'none';
+            cont3.style.display= 'block';
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+
+    </script>
+
+
+
+
+
+    <!-- <script src="js/animaciones-2.js"></script> -->
+    <script src="js/main.js"> </script>
+    <script src="js/animaciones-1.js"> </script>
+    
+    <!-- <footer>
+       
+        <div>
+            Iconos diseñados por:
+            <a href="https://www.freepik.com" title="Freepik">Freepik</a> 
+            from:
+            <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a>
+        </div>
+    </footer> -->
+</body>
+</html>
+<!-- 
+
+
